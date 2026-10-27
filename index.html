@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Slug Macros</title>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3f5f2;--surf:#fff;--ink:#16202e;--mute:#5d6b7a;--line:#d9dfe3;--navy:#12315c;--gold:#f2b705;--p:#b4432f;--c:#c98a00;--f:#2f6f8f;--on-navy:#fff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1620;--surf:#18222f;--ink:#e8edf2;--mute:#93a1b0;--line:#2a3646;--navy:#f2b705;--on-navy:#12202f;--p:#e07a64;--c:#e8b43a;--f:#6fb3d2;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0f1620;--surf:#18222f;--ink:#e8edf2;--mute:#93a1b0;--line:#2a3646;--navy:#f2b705;--on-navy:#12202f;--p:#e07a64;--c:#e8b43a;--f:#6fb3d2;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.45 "Schibsted Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:720px;margin:0 auto;padding:16px 16px 64px}
+h1{font-size:26px;font-weight:800;margin:8px 0 2px;letter-spacing:-.02em}
+h2{font-size:17px;margin:22px 0 8px;font-weight:700}
+.sub{color:var(--mute);margin:0 0 14px;font-size:14px}
+nav{display:flex;gap:4px;border-bottom:2px solid var(--line);margin:12px 0 16px;overflow-x:auto}
+nav button{background:none;border:0;padding:10px 14px;font:inherit;font-weight:500;color:var(--mute);cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-2px}
+nav button.on{color:var(--ink);font-weight:700;border-color:var(--gold)}
+button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--gold);outline-offset:1px}
+.card{background:var(--surf);border:1px solid var(--line);border-radius:10px;padding:14px;margin-bottom:10px}
+.gauge{margin:0 0 14px}
+.gauge .top{display:flex;justify-content:space-between;align-items:baseline}
+.gauge b{font-size:30px;font-weight:800;letter-spacing:-.02em}
+.gauge span{color:var(--mute);font-size:14px}
+.track{height:12px;background:var(--line);border-radius:6px;overflow:hidden;margin-top:4px}
+.fill{height:100%;border-radius:6px;transition:width .3s}
+.row{display:flex;gap:10px;align-items:center;justify-content:space-between;padding:10px 0;border-top:1px solid var(--line)}
+.row:first-child{border-top:0}
+.row .nm{font-weight:500}
+.row .mc{color:var(--mute);font-size:13px}
+.btn{background:var(--navy);color:var(--on-navy);border:0;border-radius:8px;padding:8px 14px;font:inherit;font-weight:700;cursor:pointer;white-space:nowrap}
+.btn.alt{background:none;color:var(--ink);border:1px solid var(--line);font-weight:500}
+.btn.sm{padding:5px 10px;font-size:14px}
+.ctl{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+input,select,textarea{font:inherit;color:var(--ink);background:var(--surf);border:1px solid var(--line);border-radius:8px;padding:8px 10px}
+input[type=number]{width:90px}
+textarea{width:100%;min-height:130px;font:13px/1.4 ui-monospace,Menlo,monospace}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.grid3 label{display:flex;flex-direction:column;font-size:13px;color:var(--mute);gap:3px}
+.grid3 input{width:100%}
+.note{font-size:13px;color:var(--mute);margin:6px 0}
+.tag{display:inline-block;font-size:11px;background:var(--gold);color:#12202f;border-radius:4px;padding:1px 6px;margin-left:6px;font-weight:700}
+.tot{font-weight:700}
+.empty{color:var(--mute);padding:14px 0}
+</style>
+</head>
+<body>
+<main>
+<h1>Slug Macros</h1>
+<p class="sub" id="date"></p>
+<nav id="nav"></nav>
+<div id="view"></div>
+</main>
+<script>
+const HALLS=['Colleges Nine & Ten','Cowell & Stevenson','Crown & Merrill','Porter & Kresge','Rachel Carson & Oakes'];
+const MEALS=['Breakfast','Lunch','Dinner','Late Night'];
+const SAMPLE=[
+['Sample','Breakfast','Scrambled eggs','2 eggs',12,1,10],['Sample','Breakfast','Oatmeal','1 cup',6,27,3],['Sample','Breakfast','Greek yogurt','1 cup',15,9,0],['Sample','Breakfast','Turkey sausage','2 links',12,2,8],['Sample','Breakfast','Banana','1 medium',1,27,0],
+['Sample','Lunch','Grilled chicken breast','5 oz',35,0,6],['Sample','Lunch','Brown rice','1 cup',5,45,2],['Sample','Lunch','Steamed broccoli','1 cup',3,6,0],['Sample','Lunch','Black bean bowl','1 bowl',14,40,3],['Sample','Lunch','Tofu stir fry','1 cup',18,12,10],
+['Sample','Dinner','Baked salmon','5 oz',30,0,16],['Sample','Dinner','Pasta marinara','1.5 cup',12,58,4],['Sample','Dinner','Turkey burger patty','1 patty',28,1,14],['Sample','Dinner','Roasted potatoes','1 cup',4,32,7],['Sample','Dinner','Garden salad','1 bowl',3,8,5],
+['Sample','Late Night','Cheese pizza slice','1 slice',12,34,10],['Sample','Late Night','Hummus and pita','1 serving',9,32,10]
+].map(a=>({hall:a[0],meal:a[1],name:a[2],serv:a[3],p:a[4],c:a[5],f:a[6]}));
+const K='slugmacros.v1';
+const day=()=>new Date().toLocaleDateString('en-CA');
+let S={t:{p:150,c:250,f:70},menu:SAMPLE,log:{},tab:'today',hall:'All',meal:'All',q:'',ph:'All',pm:{Breakfast:true,Lunch:true,Dinner:true},plan:null,msg:''};
+try{const r=localStorage.getItem(K);if(r){const o=JSON.parse(r);S={...S,t:o.t||S.t,menu:o.menu||S.menu,log:o.log||{}}}}catch(e){}
+const save=()=>{try{localStorage.setItem(K,JSON.stringify({t:S.t,menu:S.menu,log:S.log}))}catch(e){}};
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const kcal=i=>Math.round(4*i.p+4*i.c+9*i.f);
+const todayLog=()=>S.log[day()]||(S.log[day()]=[]);
+const sum=a=>a.reduce((s,i)=>({p:s.p+i.p*i.q,c:s.c+i.c*i.q,f:s.f+i.f*i.q}),{p:0,c:0,f:0});
+const mc=i=>`${Math.round(i.p)}P · ${Math.round(i.c)}C · ${Math.round(i.f)}F · ${kcal(i)} kcal`;
+
+function gauge(label,v,t,col){const pct=Math.min(100,t?v/t*100:0);
+return `<div class="gauge"><div class="top"><b style="color:${col}">${Math.round(v)}<small style="font-size:15px;font-weight:500"> g ${label}</small></b><span>${Math.max(0,Math.round(t-v))} g left of ${t}</span></div><div class="track"><div class="fill" style="width:${pct}%;background:${col}"></div></div></div>`}
+
+function viewToday(){const L=todayLog(),s=sum(L),k=Math.round(4*s.p+4*s.c+9*s.f);
+return `<div class="card">${gauge('protein',s.p,S.t.p,'var(--p)')}${gauge('carbs',s.c,S.t.c,'var(--c)')}${gauge('fat',s.f,S.t.f,'var(--f)')}<div class="tot">${k} kcal of ${Math.round(4*S.t.p+4*S.t.c+9*S.t.f)}</div></div>
+<h2>Logged today</h2><div class="card">${L.length?L.map((i,x)=>`<div class="row"><div><div class="nm">${esc(i.name)}${i.q!==1?' ×'+i.q:''}</div><div class="mc">${esc(i.meal||'')} · ${mc({p:i.p*i.q,c:i.c*i.q,f:i.f*i.q})}</div></div><button class="btn alt sm" data-act="del" data-i="${x}">Remove</button></div>`).join(''):'<div class="empty">Nothing logged yet. Add items from the Menu tab or build a plan.</div>'}</div>
+<h2>Add a custom entry</h2><div class="card"><div class="ctl"><input id="cn" placeholder="Name" style="flex:1;min-width:140px"><input id="cp" type="number" placeholder="P g"><input id="cc" type="number" placeholder="C g"><input id="cf" type="number" placeholder="F g"></div><button class="btn" data-act="custom">Add entry</button></div>`}
+
+const opts=(arr,cur,all)=>[all,...arr].map(x=>`<option${x===cur?' selected':''}>${esc(x)}</option>`).join('');
+function filtered(){return S.menu.map((m,i)=>({...m,i})).filter(m=>(S.hall==='All'||m.hall===S.hall)&&(S.meal==='All'||m.meal===S.meal)&&m.name.toLowerCase().includes(S.q.toLowerCase()))}
+function viewMenu(){const hs=[...new Set([...HALLS,...S.menu.map(m=>m.hall)])];const L=filtered();
+return `<div class="ctl"><select id="fh">${opts(hs,S.hall,'All')}</select><select id="fm">${opts(MEALS,S.meal,'All')}</select><input id="fq" placeholder="Search" value="${esc(S.q)}" style="flex:1;min-width:120px"></div>
+<div class="card">${L.length?L.map(m=>`<div class="row"><div><div class="nm">${esc(m.name)}${m.hall==='Sample'?'<span class="tag">sample</span>':''}</div><div class="mc">${esc(m.serv)} · ${esc(m.hall)} · ${esc(m.meal)}<br>${mc(m)}</div></div><button class="btn sm" data-act="add" data-i="${m.i}">Add</button></div>`).join(''):'<div class="empty">No items match. Import a menu in the Setup tab.</div>'}</div>`}
+
+function build(pool,t){if(!pool.length)return null;let best=null,bs=1e9;
+for(let n=0;n<4000;n++){const k=2+Math.floor(Math.random()*4),pick=[],used=new Set();
+for(let j=0;j<k;j++){const m=pool[Math.floor(Math.random()*pool.length)];if(used.has(m))continue;used.add(m);pick.push({...m,q:Math.random()<.25?2:1})}
+const s=sum(pick),sc=1.5*Math.abs(s.p-t.p)/Math.max(t.p,1)+Math.abs(s.c-t.c)/Math.max(t.c,1)+Math.abs(s.f-t.f)/Math.max(t.f,1);
+if(sc<bs){bs=sc;best=pick}}return best}
+function genPlan(){const s=sum(todayLog()),r={p:Math.max(0,S.t.p-s.p),c:Math.max(0,S.t.c-s.c),f:Math.max(0,S.t.f-s.f)};
+const ms=MEALS.filter(m=>S.pm[m]),w={Breakfast:.25,Lunch:.35,Dinner:.4,'Late Night':.1},tw=ms.reduce((a,m)=>a+w[m],0)||1;
+S.plan=ms.map(m=>{const sh=w[m]/tw,pool=S.menu.filter(x=>x.meal===m&&(S.ph==='All'||x.hall===S.ph));
+return{meal:m,items:build(pool,{p:r.p*sh,c:r.c*sh,f:r.f*sh})}})}
+function viewPlan(){const hs=[...new Set([...HALLS,...S.menu.map(m=>m.hall)])];
+const out=S.plan?S.plan.map((b,bi)=>{if(!b.items)return `<div class="card"><b>${b.meal}</b><div class="empty">No ${b.meal.toLowerCase()} items for this hall. Import its menu in Setup.</div></div>`;
+const t=sum(b.items);return `<div class="card"><div class="top" style="display:flex;justify-content:space-between;align-items:center"><b>${b.meal}</b><button class="btn sm" data-act="addplan" data-i="${bi}">Log this meal</button></div>${b.items.map(i=>`<div class="row"><div class="nm">${esc(i.name)}${i.q>1?' ×'+i.q:''} <span class="mc">${esc(i.serv)}</span></div></div>`).join('')}<div class="mc">Meal total · ${mc(t)}</div></div>`}).join(''):'<div class="empty">Choose a hall and meals, then generate a plan for the macros you have left today.</div>';
+return `<div class="card"><div class="ctl"><select id="ph">${opts(hs,S.ph,'All')}</select></div><div class="ctl">${MEALS.map(m=>`<label><input type="checkbox" data-pm="${m}"${S.pm[m]?' checked':''}> ${m}</label>`).join('')}</div><button class="btn" data-act="plan">${S.plan?'Shuffle plan':'Generate plan'}</button></div>${out}`}
+
+function viewSetup(){return `<h2>Daily targets</h2><div class="card"><div class="grid3"><label>Protein (g)<input id="tp" type="number" value="${S.t.p}"></label><label>Carbs (g)<input id="tc" type="number" value="${S.t.c}"></label><label>Fat (g)<input id="tf" type="number" value="${S.t.f}"></label></div><p class="note">${Math.round(4*S.t.p+4*S.t.c+9*S.t.f)} kcal per day at these targets.</p><button class="btn" data-act="targets">Save targets</button></div>
+<h2>Import menu</h2><div class="card"><p class="note">Paste one item per line as <code>hall, meal, name, serving, protein, carbs, fat</code>. Meal is Breakfast, Lunch, Dinner or Late Night. Importing replaces the sample items.</p><textarea id="imp" placeholder="Crown &amp; Merrill, Lunch, Grilled chicken, 5 oz, 35, 0, 6"></textarea><div class="ctl" style="margin-top:8px"><button class="btn" data-act="import">Import menu</button><button class="btn alt" data-act="clearmenu">Remove all items</button></div><p class="note">${esc(S.msg)}</p></div>
+<h2>Reset</h2><div class="card"><button class="btn alt" data-act="resetlog">Clear today’s log</button></div>`}
+
+const TABS=[['today','Today'],['menu','Menu'],['plan','Plan'],['setup','Setup']];
+function render(){$('#date').textContent=new Date().toLocaleDateString(undefined,{weekday:'long',month:'long',day:'numeric'})+(S.updated?' (menu updated '+S.updated+')':'');
+$('#nav').innerHTML=TABS.map(([k,l])=>`<button data-tab="${k}" class="${S.tab===k?'on':''}">${l}</button>`).join('');
+$('#view').innerHTML=({today:viewToday,menu:viewMenu,plan:viewPlan,setup:viewSetup})[S.tab]();
+const q=$('#fq');if(q&&document.activeElement===document.body&&S._f){q.focus();q.setSelectionRange(q.value.length,q.value.length)}}
+function $(s){return document.querySelector(s)}
+function logItem(m,q){todayLog().push({name:m.name,meal:m.meal,p:+m.p,c:+m.c,f:+m.f,q:q||1})}
+document.addEventListener('click',e=>{
+const t=e.target.closest('[data-tab],[data-act]');if(!t)return;
+if(t.dataset.tab){S.tab=t.dataset.tab;return render()}
+const a=t.dataset.act,i=+t.dataset.i;
+if(a==='del')todayLog().splice(i,1);
+if(a==='add')logItem(S.menu[i]);
+if(a==='custom'){const n=$('#cn').value.trim()||'Custom entry';logItem({name:n,meal:'',p:+$('#cp').value||0,c:+$('#cc').value||0,f:+$('#cf').value||0})}
+if(a==='plan')genPlan();
+if(a==='addplan'){S.plan[i].items.forEach(x=>logItem(x,x.q));S.plan[i].items=null;S.plan[i].items=null;S.tab='today'}
+if(a==='targets'){S.t={p:+$('#tp').value||0,c:+$('#tc').value||0,f:+$('#tf').value||0}}
+if(a==='import'){const rows=$('#imp').value.split('\n').map(l=>l.split(',').map(x=>x.trim())).filter(r=>r.length>=7&&!isNaN(+r[4]));
+if(rows.length){S.menu=rows.map(r=>({hall:r[0],meal:MEALS.find(m=>m.toLowerCase()===r[1].toLowerCase())||r[1],name:r[2],serv:r[3],p:+r[4],c:+r[5],f:+r[6]}));S.plan=null;S.msg=`Imported ${rows.length} items.`}else S.msg='No valid lines found. Each line needs seven comma-separated values.'}
+if(a==='clearmenu'){S.menu=[];S.plan=null;S.msg='Menu cleared.'}
+if(a==='resetlog')S.log[day()]=[];
+save();render()});
+document.addEventListener('change',e=>{const t=e.target;
+if(t.id==='fh')S.hall=t.value;if(t.id==='fm')S.meal=t.value;if(t.id==='ph'){S.ph=t.value;S.plan=null}
+if(t.dataset.pm){S.pm[t.dataset.pm]=t.checked;S.plan=null}render()});
+document.addEventListener('input',e=>{if(e.target.id==='fq'){S.q=e.target.value;S._f=1;const v=$('#view'),pos=e.target.selectionStart;render();const q=$('#fq');q.focus();q.setSelectionRange(pos,pos)}});
+render();
+fetch('menu.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(d=>{if(d&&d.items&&d.items.length){S.menu=d.items;S.updated=d.updated;S.tab='plan';genPlan();render()}}).catch(()=>{});
+</script>
+</body>
+</html>

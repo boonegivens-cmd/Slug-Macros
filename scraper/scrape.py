@@ -21,7 +21,7 @@ debug, cache = pathlib.Path("debug"), {}
 
 def get(url):
     time.sleep(0.3)
-    r = http.get(url, timeout=30)
+    r = http.get(url, timeout=30, verify=False)
     r.raise_for_status()
     return r.text
 

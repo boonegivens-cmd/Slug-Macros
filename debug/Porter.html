@@ -1,0 +1,2167 @@
+
+<!-- The following is required by Aurora Information Systems, DO NOT MODIFY OR REMOVE -->
+<!-- fieldfilt.aspx, Version 2.6.0  -->
+<!-- End of Aurora Information Systems Required Text -->
+<!-- The following is required by Aurora Information Systems, DO NOT MODIFY OR REMOVE -->
+<!-- nauserdata.aspx, Version 2.6  -->
+<!-- End of Aurora Information Systems Required Text -->
+<html>
+<head>
+<title>UCSC - This Week's Menus</title>
+<link href="foodpro_web_ina.css" rel="stylesheet" type="text/css"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+</head>
+<script language="JAVASCRIPT">
+
+var popImg = null
+var popDiag = null
+var curHeight = null
+var curWidth = null
+var popTop = null
+var popLeft = null
+
+function openPopImg(picName,windowWidth,windowHeight) {
+  closePopImg();
+  curHeight=screen.availHeight;
+  curWidth=screen.availWidth;
+  popTop = 75;
+  popLeft = eval(curWidth - windowWidth - 25);
+  popImg=window.open(picName, '_new', "toolbar=no,scrollbars=no,resizable=yes,top=" + popTop + ",left=" + popLeft + ",width=" + (parseInt(windowWidth)+0) + ",height=" + (parseInt(windowHeight)+0));
+}
+function closePopImg(){
+  if(navigator.appName != "Microsoft Internet Explorer" || parseInt(navigator.appVersion) >= 4) if(popImg != null) if(!popImg.closed) popImg.close()
+}
+function setStatus(msg){
+  status = msg;
+  return true;
+}
+
+var newWindowOptions = null
+var newWindowTop = null
+var newWindowLeft = null
+
+function openDescWin(descText, dispName) {  
+  if(descText=="")
+  {     
+     closeDescWin()
+  }
+  else
+  {
+     closeDescWin();
+     newWindowTop = screen.height - (screen.height * 0.75) - 80;
+     newWindowLeft = screen.width - 310;
+     newWindowOptions = "toolbar=no,width=300,height=125,top=" + newWindowTop + ",left=" + newWindowLeft + ",alwaysRaised=yes";     
+     popDiag=window.open("", "Recipe_Desc", newWindowOptions);
+     descText = descText.replace("~","'");
+     dispName = dispName.replace("~","'"); 
+     popDiag.document.write("<html><head><title>" + dispName + "</title><link rel='stylesheet' href='foodpro_web_ina.css' type='text/css'></head><body><div class='shortmenuproddesc'>" + descText + "</div></body></html>");
+  }
+}
+function closeDescWin(){   
+   if(navigator.appName != "Microsoft Internet Explorer" || parseInt(navigator.appVersion) >= 4) if(popDiag != null) if(!popDiag.closed) popDiag.close();
+}
+</script>
+<body bgcolor="#ffffff" onunload="closePopImg();">
+<table border="0" bordercolor="#00FFFF" cellpadding="0" cellspacing="10" width="100%">
+<tr>
+<td class="headbody"><center>
+<table border="0" bordercolor="#ff00fc" class="headcontainer" width="85%">
+<tr>
+<td valign="top">
+<table border="0" bordercolor="#24ff00" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td>
+<div class="headlocation">Porter &amp; Kresge Dining Hall</div><br/>
+<a href="location.aspx"><span class="headchooseloc">Choose another location »</span></a>
+</td>
+<td align="right" valign="top">
+<form action="search.aspx" method="post">
+<input name="Action" type="hidden" value="SEARCH"/>
+<input name="strCurSearchLocs" type="hidden" value="25[*]Porter &amp; Kresge Dining Hall"/>
+<input name="strCurSearchDays" type="hidden" value="10/27/2026"/>
+<div class="searchtext">Find your favorites...<div>
+<div class="searchtext"><input name="strCurKeywords" type="text" value=""/><br/>
+<input style="margin:4pt 0pt;" type="submit" value="Search"/></div>
+</div></div></form>
+</td>
+</tr>
+<tr>
+<td> </td>
+<td><div align="right">
+<script>
+	  function clearFilters() {
+             var curMenuhref = location.href;
+	     document.cookie = "SavedAllergens=;Path=/;"
+             document.cookie = "SavedWebCodes=;Path=/;"
+	     document.location.href="?action=clearfilters&sName=UC+Santa+Cruz+Dining&locationNum=25&locationName=Porter+%26+Kresge+Dining+Hall&naFlag=1";        
+             parent.frames[2].location.href = curMenuhref;
+	}
+	</script>
+<a href="#" onclick='javascript:window.open("allergenfilter.aspx?strcurlocationnum=25","AllergenFilter","width=800,height=800,location=no,status=no,toolbar=yes,scrollbars=yes,resizable=yes")'><span class="allergenfilterinclinks">Set Filters »</span></a><br/> <br/>
+<!-- The following is required by Aurora Information Systems, DO NOT MODIFY OR REMOVE -->
+<!-- allergenfilterinc.aspx, Version 2.6  -->
+<!-- End of Aurora Information Systems Required Text --> </div></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</center>
+<!-- The following is required by Aurora Information Systems, DO NOT MODIFY OR REMOVE -->
+<!-- head.aspx, Version 2.6  -->
+<!-- End of Aurora Information Systems Required Text -->
+</td>
+</tr>
+<tr>
+<td valign="top">
+<div class="shortmenutitle">Menus for Tuesday, October 27, 2026</div>
+</td>
+</tr>
+<tr>
+<td class="datebody">
+<table align="center" border="0" bordercolor="#FFFF00" cellpadding="0" cellspacing="0" width="80%">
+<tr>
+<td align="center">
+<form name="datecombo">
+<p><select name="example" size="1">
+<option value="Select a date">Select a date</option>
+<option onmouseout="window.status= ' ';" onmouseover="window.status = 'Select a date.'; return true;" value="shortmenu.aspx?sName=UC+Santa+Cruz+Dining&amp;locationNum=25&amp;locationName=Porter+%26+Kresge+Dining+Hall&amp;naFlag=1&amp;WeeksMenus=UCSC+-+This+Week%27s+Menus&amp;myaction=read&amp;dtdate=10%2f26%2f2026">Monday, October 26
+</option>
+<option onmouseout="window.status= ' ';" onmouseover="window.status = 'Select a date.'; return true;" value="shortmenu.aspx?sName=UC+Santa+Cruz+Dining&amp;locationNum=25&amp;locationName=Porter+%26+Kresge+Dining+Hall&amp;naFlag=1&amp;WeeksMenus=UCSC+-+This+Week%27s+Menus&amp;myaction=read&amp;dtdate=10%2f27%2f2026">Tuesday, October 27
+</option>
+<option onmouseout="window.status= ' ';" onmouseover="window.status = 'Select a date.'; return true;" value="shortmenu.aspx?sName=UC+Santa+Cruz+Dining&amp;locationNum=25&amp;locationName=Porter+%26+Kresge+Dining+Hall&amp;naFlag=1&amp;WeeksMenus=UCSC+-+This+Week%27s+Menus&amp;myaction=read&amp;dtdate=10%2f28%2f2026">Wednesday, October 28
+</option>
+<option onmouseout="window.status= ' ';" onmouseover="window.status = 'Select a date.'; return true;" value="shortmenu.aspx?sName=UC+Santa+Cruz+Dining&amp;locationNum=25&amp;locationName=Porter+%26+Kresge+Dining+Hall&amp;naFlag=1&amp;WeeksMenus=UCSC+-+This+Week%27s+Menus&amp;myaction=read&amp;dtdate=10%2f29%2f2026">Thursday, October 29
+</option>
+<option onmouseout="window.status= ' ';" onmouseover="window.status = 'Select a date.'; return true;" value="shortmenu.aspx?sName=UC+Santa+Cruz+Dining&amp;locationNum=25&amp;locationName=Porter+%26+Kresge+Dining+Hall&amp;naFlag=1&amp;WeeksMenus=UCSC+-+This+Week%27s+Menus&amp;myaction=read&amp;dtdate=10%2f30%2f2026">Friday, October 30
+</option>
+<option onmouseout="window.status= ' ';" onmouseover="window.status = 'Select a date.'; return true;" value="shortmenu.aspx?sName=UC+Santa+Cruz+Dining&amp;locationNum=25&amp;locationName=Porter+%26+Kresge+Dining+Hall&amp;naFlag=1&amp;WeeksMenus=UCSC+-+This+Week%27s+Menus&amp;myaction=read&amp;dtdate=10%2f31%2f2026">Saturday, October 31
+</option>
+<option onmouseout="window.status= ' ';" onmouseover="window.status = 'Select a date.'; return true;" value="shortmenu.aspx?sName=UC+Santa+Cruz+Dining&amp;locationNum=25&amp;locationName=Porter+%26+Kresge+Dining+Hall&amp;naFlag=1&amp;WeeksMenus=UCSC+-+This+Week%27s+Menus&amp;myaction=read&amp;dtdate=11%2f1%2f2026">Sunday, November 1
+</option>
+<option onmouseout="window.status= ' ';" onmouseover="window.status = 'Select a date.'; return true;" value="shortmenu.aspx?sName=UC+Santa+Cruz+Dining&amp;locationNum=25&amp;locationName=Porter+%26+Kresge+Dining+Hall&amp;naFlag=1&amp;WeeksMenus=UCSC+-+This+Week%27s+Menus&amp;myaction=read&amp;dtdate=11%2f2%2f2026">Monday, November 2
+</option>
+<option onmouseout="window.status= ' ';" onmouseover="window.status = 'Select a date.'; return true;" value="shortmenu.aspx?sName=UC+Santa+Cruz+Dining&amp;locationNum=25&amp;locationName=Porter+%26+Kresge+Dining+Hall&amp;naFlag=1&amp;WeeksMenus=UCSC+-+This+Week%27s+Menus&amp;myaction=read&amp;dtdate=11%2f3%2f2026">Tuesday, November 3
+</option>
+<script type="text/javascript">
+<!--
+function go(){
+location=
+document.datecombo.example.
+options[document.datecombo.example.selectedIndex].value
+}
+//-->
+</script>
+<input name="test" onclick="go()" type="button" value="Go!"/>
+</select></p>
+</form>
+</td>
+</tr>
+</table>
+<!-- The following is required by Aurora Information Systems, DO NOT MODIFY OR REMOVE -->
+<!-- date.aspx, Version 2.6  -->
+<!-- End of Aurora Information Systems Required Text --> </td>
+</tr>
+<br/>
+<div class="shortmenuinstructs">  </div>
+<table align="center" border="0" bordercolor="#CCC" bordercolordark="black" bordercolorlight="black" cellpadding="0" cellspacing="0" width="85%">
+<tr>
+<td valign="top" width="50%">
+<table border="0" bordercolor="#FFFF00" cellpadding="0" cellspacing="0" height="100%" width="100%">
+<tr>
+<td align="left" height="15">
+<table border="0" bordercolor="#FF00FF" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td width="10%">
+<div class="shortmenumeals">Breakfast</div>
+</td>
+<td align="left" valign="top">   
+                            
+                              <span class="shortmenunutritive"><a href="longmenu.aspx?sName=UC+Santa+Cruz+Dining&amp;locationNum=25&amp;locationName=Porter+%26+Kresge+Dining+Hall&amp;naFlag=1&amp;WeeksMenus=UCSC+-+This+Week%27s+Menus&amp;dtdate=10%2f27%2f2026&amp;mealName=Breakfast" onmouseout="window.status= ' ';" onmouseover="window.status = 'Click for Nutrition Calculator'; return true;">Nutrition Calculator</a></span>
+</td>
+<td>
+                               
+                            </td>
+</tr>
+</table>
+</td>
+</tr>
+<tr height="5">
+<td valign="top">
+<table border="0" cellpadding="0" cellspacing="1" width="100%">
+<tr>
+<td colspan="4">
+<div class="shortmenucats"><span style="color: #000000">-- Breakfast --</span></div>
+</td>
+</tr>
+<tr>
+<td valign="top" width="95%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr height="30px">
+<td height="30px" style="border-bottom: 1px solid #d2d4d2;">
+<!-- Recipe Name Is Displayed Here -->
+<div class="shortmenurecipes"><span style="color: #585858">Cage-Free Scrambled Eggs </span></div>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/veggie.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/eggs.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/gluten.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+</tr>
+</table>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+                              
+                             </td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+<div class="shortmenuprices"><span style="color: #000000"> </span></div>
+</td>
+<td colspan="1" valign="top" width="5%">
+                                
+                            </td>
+</tr>
+<tr>
+<td valign="top" width="95%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr height="30px">
+<td height="30px" style="border-bottom: 1px solid #d2d4d2;">
+<!-- Recipe Name Is Displayed Here -->
+<div class="shortmenurecipes"><span style="color: #585858">French Toast Sticks </span></div>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/vegan.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/soy.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/wheat.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+</tr>
+</table>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+                              
+                             </td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+<div class="shortmenuprices"><span style="color: #000000"> </span></div>
+</td>
+<td colspan="1" valign="top" width="5%">
+                                
+                            </td>
+</tr>
+<tr>
+<td valign="top" width="95%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr height="30px">
+<td height="30px" style="border-bottom: 1px solid #d2d4d2;">
+<!-- Recipe Name Is Displayed Here -->
+<div class="shortmenurecipes"><span style="color: #585858">Hard Boiled Cage-Free Egg </span></div>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/veggie.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/eggs.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/gluten.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+</tr>
+</table>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+                              
+                             </td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+<div class="shortmenuprices"><span style="color: #000000"> </span></div>
+</td>
+<td colspan="1" valign="top" width="5%">
+                                
+                            </td>
+</tr>
+<tr>
+<td valign="top" width="95%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr height="30px">
+<td height="30px" style="border-bottom: 1px solid #d2d4d2;">
+<!-- Recipe Name Is Displayed Here -->
+<div class="shortmenurecipes"><span style="color: #585858">Organic Gluten-Free Oatmeal </span></div>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/vegan.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/gluten.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+</tr>
+</table>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+                              
+                             </td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+<div class="shortmenuprices"><span style="color: #000000"> </span></div>
+</td>
+<td colspan="1" valign="top" width="5%">
+                                
+                            </td>
+</tr>
+<tr>
+<td valign="top" width="95%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr height="30px">
+<td height="30px" style="border-bottom: 1px solid #d2d4d2;">
+<!-- Recipe Name Is Displayed Here -->
+<div class="shortmenurecipes"><span style="color: #585858">Oven Roasted Herbed Potatoes </span></div>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/vegan.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/gluten.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+</tr>
+</table>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+                              
+                             </td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+<div class="shortmenuprices"><span style="color: #000000"> </span></div>
+</td>
+<td colspan="1" valign="top" width="5%">
+                                
+                            </td>
+</tr>
+<tr>
+<td valign="top" width="95%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr height="30px">
+<td height="30px" style="border-bottom: 1px solid #d2d4d2;">
+<!-- Recipe Name Is Displayed Here -->
+<div class="shortmenurecipes"><span style="color: #585858">Pork Sausage Patties </span></div>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/pork.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/gluten.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+</tr>
+</table>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+                              
+                             </td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+<div class="shortmenuprices"><span style="color: #000000"> </span></div>
+</td>
+<td colspan="1" valign="top" width="5%">
+                                
+                            </td>
+</tr>
+<tr>
+<td valign="top" width="95%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr height="30px">
+<td height="30px" style="border-bottom: 1px solid #d2d4d2;">
+<!-- Recipe Name Is Displayed Here -->
+<div class="shortmenurecipes"><span style="color: #585858">Sweet Potato, Black Bean, and Kale Hash </span></div>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/vegan.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/gluten.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+</tr>
+</table>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+                              
+                             </td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+<div class="shortmenuprices"><span style="color: #000000"> </span></div>
+</td>
+<td colspan="1" valign="top" width="5%">
+                                
+                            </td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="shortmenucats"><span style="color: #000000">-- Clean Plate --</span></div>
+</td>
+</tr>
+<tr>
+<td valign="top" width="95%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr height="30px">
+<td height="30px" style="border-bottom: 1px solid #d2d4d2;">
+<!-- Recipe Name Is Displayed Here -->
+<div class="shortmenurecipes"><span style="color: #585858">Steamed Rice </span></div>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/vegan.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/gluten.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+</tr>
+</table>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+                              
+                             </td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+<div class="shortmenuprices"><span style="color: #000000"> </span></div>
+</td>
+<td colspan="1" valign="top" width="5%">
+                                
+                            </td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="shortmenucats"><span style="color: #000000">-- Campus Bakery --</span></div>
+</td>
+</tr>
+<tr>
+<td valign="top" width="95%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr height="30px">
+<td height="30px" style="border-bottom: 1px solid #d2d4d2;">
+<!-- Recipe Name Is Displayed Here -->
+<div class="shortmenurecipes"><span style="color: #585858">Brownies </span></div>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/veggie.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/soy.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/eggs.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/milk.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/wheat.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+</tr>
+</table>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+                              
+                             </td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+<div class="shortmenuprices"><span style="color: #000000"> </span></div>
+</td>
+<td colspan="1" valign="top" width="5%">
+                                
+                            </td>
+</tr>
+<tr>
+<td valign="top" width="95%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr height="30px">
+<td height="30px" style="border-bottom: 1px solid #d2d4d2;">
+<!-- Recipe Name Is Displayed Here -->
+<div class="shortmenurecipes"><span style="color: #585858">Lemon Raspberry Muffin </span></div>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/veggie.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/soy.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/eggs.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/milk.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/wheat.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+</tr>
+</table>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+                              
+                             </td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+<div class="shortmenuprices"><span style="color: #000000"> </span></div>
+</td>
+<td colspan="1" valign="top" width="5%">
+                                
+                            </td>
+</tr>
+<tr>
+<td valign="top" width="95%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr height="30px">
+<td height="30px" style="border-bottom: 1px solid #d2d4d2;">
+<!-- Recipe Name Is Displayed Here -->
+<div class="shortmenurecipes"><span style="color: #585858">Pumpkin Muffin </span></div>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/veggie.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/soy.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/eggs.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/milk.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/wheat.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+</tr>
+</table>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+                              
+                             </td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+<div class="shortmenuprices"><span style="color: #000000"> </span></div>
+</td>
+<td colspan="1" valign="top" width="5%">
+                                
+                            </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<p> </p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="50%">
+<table border="0" bordercolor="#FFFF00" cellpadding="0" cellspacing="0" height="100%" width="100%">
+<tr>
+<td align="left" height="15">
+<table border="0" bordercolor="#FF00FF" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td width="10%">
+<div class="shortmenumeals">Lunch</div>
+</td>
+<td align="left" valign="top">   
+                            
+                              <span class="shortmenunutritive"><a href="longmenu.aspx?sName=UC+Santa+Cruz+Dining&amp;locationNum=25&amp;locationName=Porter+%26+Kresge+Dining+Hall&amp;naFlag=1&amp;WeeksMenus=UCSC+-+This+Week%27s+Menus&amp;dtdate=10%2f27%2f2026&amp;mealName=Lunch" onmouseout="window.status= ' ';" onmouseover="window.status = 'Click for Nutrition Calculator'; return true;">Nutrition Calculator</a></span>
+</td>
+<td>
+                               
+                            </td>
+</tr>
+</table>
+</td>
+</tr>
+<tr height="5">
+<td valign="top">
+<table border="0" cellpadding="0" cellspacing="1" width="100%">
+<tr>
+<td colspan="4">
+<div class="shortmenucats"><span style="color: #000000">-- Soups --</span></div>
+</td>
+</tr>
+<tr>
+<td valign="top" width="95%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr height="30px">
+<td height="30px" style="border-bottom: 1px solid #d2d4d2;">
+<!-- Recipe Name Is Displayed Here -->
+<div class="shortmenurecipes"><span style="color: #585858">Chicken Noodle Soup </span></div>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/soy.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/eggs.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/wheat.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+</tr>
+</table>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+                              
+                             </td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+<div class="shortmenuprices"><span style="color: #000000"> </span></div>
+</td>
+<td colspan="1" valign="top" width="5%">
+                                
+                            </td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="shortmenucats"><span style="color: #000000">-- Entrees --</span></div>
+</td>
+</tr>
+<tr>
+<td valign="top" width="95%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr height="30px">
+<td height="30px" style="border-bottom: 1px solid #d2d4d2;">
+<!-- Recipe Name Is Displayed Here -->
+<div class="shortmenurecipes"><span style="color: #585858">Black Beans with Cumin Spice </span></div>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/vegan.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/gluten.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+</tr>
+</table>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+                              
+                             </td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+<div class="shortmenuprices"><span style="color: #000000"> </span></div>
+</td>
+<td colspan="1" valign="top" width="5%">
+                                
+                            </td>
+</tr>
+<tr>
+<td valign="top" width="95%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr height="30px">
+<td height="30px" style="border-bottom: 1px solid #d2d4d2;">
+<!-- Recipe Name Is Displayed Here -->
+<div class="shortmenurecipes"><span style="color: #585858">Caramelized Chipotle Tofu </span></div>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/vegan.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/soy.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/gluten.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+</tr>
+</table>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+                              
+                             </td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+<div class="shortmenuprices"><span style="color: #000000"> </span></div>
+</td>
+<td colspan="1" valign="top" width="5%">
+                                
+                            </td>
+</tr>
+<tr>
+<td valign="top" width="95%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr height="30px">
+<td height="30px" style="border-bottom: 1px solid #d2d4d2;">
+<!-- Recipe Name Is Displayed Here -->
+<div class="shortmenurecipes"><span style="color: #585858">Cornmeal Crusted Sand Bass </span></div>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/fish.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+</tr>
+</table>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+                              
+                             </td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+<div class="shortmenuprices"><span style="color: #000000"> </span></div>
+</td>
+<td colspan="1" valign="top" width="5%">
+                                
+                            </td>
+</tr>
+<tr>
+<td valign="top" width="95%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr height="30px">
+<td height="30px" style="border-bottom: 1px solid #d2d4d2;">
+<!-- Recipe Name Is Displayed Here -->
+<div class="shortmenurecipes"><span style="color: #585858">Steamed Broccoli </span></div>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/vegan.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/gluten.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+</tr>
+</table>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+                              
+                             </td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+<div class="shortmenuprices"><span style="color: #000000"> </span></div>
+</td>
+<td colspan="1" valign="top" width="5%">
+                                
+                            </td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="shortmenucats"><span style="color: #000000">-- Pizza --</span></div>
+</td>
+</tr>
+<tr>
+<td valign="top" width="95%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr height="30px">
+<td height="30px" style="border-bottom: 1px solid #d2d4d2;">
+<!-- Recipe Name Is Displayed Here -->
+<div class="shortmenurecipes"><span style="color: #585858">Cheese Pizza </span></div>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/veggie.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/soy.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/eggs.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/milk.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/sesame.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/wheat.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+</tr>
+</table>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+                              
+                             </td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+<div class="shortmenuprices"><span style="color: #000000"> </span></div>
+</td>
+<td colspan="1" valign="top" width="5%">
+                                
+                            </td>
+</tr>
+<tr>
+<td valign="top" width="95%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr height="30px">
+<td height="30px" style="border-bottom: 1px solid #d2d4d2;">
+<!-- Recipe Name Is Displayed Here -->
+<div class="shortmenurecipes"><span style="color: #585858">Thai Chicken Pizza </span></div>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/soy.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/eggs.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/milk.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/sesame.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/wheat.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+</tr>
+</table>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+                              
+                             </td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+<div class="shortmenuprices"><span style="color: #000000"> </span></div>
+</td>
+<td colspan="1" valign="top" width="5%">
+                                
+                            </td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="shortmenucats"><span style="color: #000000">-- Clean Plate --</span></div>
+</td>
+</tr>
+<tr>
+<td valign="top" width="95%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr height="30px">
+<td height="30px" style="border-bottom: 1px solid #d2d4d2;">
+<!-- Recipe Name Is Displayed Here -->
+<div class="shortmenurecipes"><span style="color: #585858">Allergen Free Halal Chicken Thigh </span></div>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/gluten.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/halal.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+</tr>
+</table>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+                              
+                             </td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+<div class="shortmenuprices"><span style="color: #000000"> </span></div>
+</td>
+<td colspan="1" valign="top" width="5%">
+                                
+                            </td>
+</tr>
+<tr>
+<td valign="top" width="95%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr height="30px">
+<td height="30px" style="border-bottom: 1px solid #d2d4d2;">
+<!-- Recipe Name Is Displayed Here -->
+<div class="shortmenurecipes"><span style="color: #585858">Steamed Rice </span></div>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/vegan.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/gluten.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+</tr>
+</table>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+                              
+                             </td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+<div class="shortmenuprices"><span style="color: #000000"> </span></div>
+</td>
+<td colspan="1" valign="top" width="5%">
+                                
+                            </td>
+</tr>
+<tr>
+<td valign="top" width="95%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr height="30px">
+<td height="30px" style="border-bottom: 1px solid #d2d4d2;">
+<!-- Recipe Name Is Displayed Here -->
+<div class="shortmenurecipes"><span style="color: #585858">Tofu with Kosher Salt </span></div>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/vegan.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/soy.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/gluten.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+</tr>
+</table>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+                              
+                             </td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+<div class="shortmenuprices"><span style="color: #000000"> </span></div>
+</td>
+<td colspan="1" valign="top" width="5%">
+                                
+                            </td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="shortmenucats"><span style="color: #000000">-- Campus Bakery --</span></div>
+</td>
+</tr>
+<tr>
+<td valign="top" width="95%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr height="30px">
+<td height="30px" style="border-bottom: 1px solid #d2d4d2;">
+<!-- Recipe Name Is Displayed Here -->
+<div class="shortmenurecipes"><span style="color: #585858">Lemon Bread </span></div>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/veggie.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/soy.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/eggs.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/milk.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/wheat.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+</tr>
+</table>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+                              
+                             </td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+<div class="shortmenuprices"><span style="color: #000000"> </span></div>
+</td>
+<td colspan="1" valign="top" width="5%">
+                                
+                            </td>
+</tr>
+<tr>
+<td valign="top" width="95%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr height="30px">
+<td height="30px" style="border-bottom: 1px solid #d2d4d2;">
+<!-- Recipe Name Is Displayed Here -->
+<div class="shortmenurecipes"><span style="color: #585858">Vegan Raspberry Granola Bars </span></div>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/vegan.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/wheat.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+</tr>
+</table>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+                              
+                             </td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+<div class="shortmenuprices"><span style="color: #000000"> </span></div>
+</td>
+<td colspan="1" valign="top" width="5%">
+                                
+                            </td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="shortmenucats"><span style="color: #000000">-- Hot Bars --</span></div>
+</td>
+</tr>
+<tr>
+<td valign="top" width="95%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr height="30px">
+<td height="30px" style="border-bottom: 1px solid #d2d4d2;">
+<!-- Recipe Name Is Displayed Here -->
+<div class="shortmenurecipes"><span style="color: #585858">BBQ Chili Garlic Kogi Sauce </span></div>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/vegan.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/soy.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/gluten.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+</tr>
+</table>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+                              
+                             </td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+<div class="shortmenuprices"><span style="color: #000000"> </span></div>
+</td>
+<td colspan="1" valign="top" width="5%">
+                                
+                            </td>
+</tr>
+<tr>
+<td valign="top" width="95%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr height="30px">
+<td height="30px" style="border-bottom: 1px solid #d2d4d2;">
+<!-- Recipe Name Is Displayed Here -->
+<div class="shortmenurecipes"><span style="color: #585858">BBQ Ginger Soy Beef </span></div>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/soy.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/sesame.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/beef.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/gluten.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/halal.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+</tr>
+</table>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+                              
+                             </td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+<div class="shortmenuprices"><span style="color: #000000"> </span></div>
+</td>
+<td colspan="1" valign="top" width="5%">
+                                
+                            </td>
+</tr>
+<tr>
+<td valign="top" width="95%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr height="30px">
+<td height="30px" style="border-bottom: 1px solid #d2d4d2;">
+<!-- Recipe Name Is Displayed Here -->
+<div class="shortmenurecipes"><span style="color: #585858">Chili Soy Slaw </span></div>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/vegan.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/soy.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/sesame.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/gluten.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+</tr>
+</table>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+                              
+                             </td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+<div class="shortmenuprices"><span style="color: #000000"> </span></div>
+</td>
+<td colspan="1" valign="top" width="5%">
+                                
+                            </td>
+</tr>
+<tr>
+<td valign="top" width="95%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr height="30px">
+<td height="30px" style="border-bottom: 1px solid #d2d4d2;">
+<!-- Recipe Name Is Displayed Here -->
+<div class="shortmenurecipes"><span style="color: #585858">Ginger Garlic Tofu </span></div>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/vegan.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/soy.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/gluten.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+</tr>
+</table>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+                              
+                             </td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+<div class="shortmenuprices"><span style="color: #000000"> </span></div>
+</td>
+<td colspan="1" valign="top" width="5%">
+                                
+                            </td>
+</tr>
+<tr>
+<td valign="top" width="95%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr height="30px">
+<td height="30px" style="border-bottom: 1px solid #d2d4d2;">
+<!-- Recipe Name Is Displayed Here -->
+<div class="shortmenurecipes"><span style="color: #585858">Kimchi Fried Rice </span></div>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/vegan.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/gluten.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+</tr>
+</table>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+                              
+                             </td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+<div class="shortmenuprices"><span style="color: #000000"> </span></div>
+</td>
+<td colspan="1" valign="top" width="5%">
+                                
+                            </td>
+</tr>
+<tr>
+<td valign="top" width="95%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr height="30px">
+<td height="30px" style="border-bottom: 1px solid #d2d4d2;">
+<!-- Recipe Name Is Displayed Here -->
+<div class="shortmenurecipes"><span style="color: #585858">Kogi BBQ Bowl Bar </span></div>
+</td>
+</tr>
+</table>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+                              
+                             </td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+<div class="shortmenuprices"><span style="color: #000000"> </span></div>
+</td>
+<td colspan="1" valign="top" width="5%">
+                                
+                            </td>
+</tr>
+<tr>
+<td valign="top" width="95%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr height="30px">
+<td height="30px" style="border-bottom: 1px solid #d2d4d2;">
+<!-- Recipe Name Is Displayed Here -->
+<div class="shortmenurecipes"><span style="color: #585858">Pickled Red Onions and Peppers </span></div>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/vegan.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/gluten.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+</tr>
+</table>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+                              
+                             </td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+<div class="shortmenuprices"><span style="color: #000000"> </span></div>
+</td>
+<td colspan="1" valign="top" width="5%">
+                                
+                            </td>
+</tr>
+<tr>
+<td valign="top" width="95%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr height="30px">
+<td height="30px" style="border-bottom: 1px solid #d2d4d2;">
+<!-- Recipe Name Is Displayed Here -->
+<div class="shortmenurecipes"><span style="color: #585858">Salsa Roja Kogi-Style </span></div>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/vegan.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/soy.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/sesame.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/gluten.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+</tr>
+</table>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+                              
+                             </td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+<div class="shortmenuprices"><span style="color: #000000"> </span></div>
+</td>
+<td colspan="1" valign="top" width="5%">
+                                
+                            </td>
+</tr>
+<tr>
+<td valign="top" width="95%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr height="30px">
+<td height="30px" style="border-bottom: 1px solid #d2d4d2;">
+<!-- Recipe Name Is Displayed Here -->
+<div class="shortmenurecipes"><span style="color: #585858">Sauteed Bok Choy and Carrots with Sesame </span></div>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/vegan.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/sesame.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/gluten.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+</tr>
+</table>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+                              
+                             </td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+<div class="shortmenuprices"><span style="color: #000000"> </span></div>
+</td>
+<td colspan="1" valign="top" width="5%">
+                                
+                            </td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="shortmenucats"><span style="color: #000000">-- Cold Bars --</span></div>
+</td>
+</tr>
+<tr>
+<td valign="top" width="95%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr height="30px">
+<td height="30px" style="border-bottom: 1px solid #d2d4d2;">
+<!-- Recipe Name Is Displayed Here -->
+<div class="shortmenurecipes"><span style="color: #585858">Deli Bar </span></div>
+</td>
+</tr>
+</table>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+                              
+                             </td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+<div class="shortmenuprices"><span style="color: #000000"> </span></div>
+</td>
+<td colspan="1" valign="top" width="5%">
+                                
+                            </td>
+</tr>
+<tr>
+<td valign="top" width="95%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr height="30px">
+<td height="30px" style="border-bottom: 1px solid #d2d4d2;">
+<!-- Recipe Name Is Displayed Here -->
+<div class="shortmenurecipes"><span style="color: #585858">Salad Bar </span></div>
+</td>
+</tr>
+</table>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+                              
+                             </td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+<div class="shortmenuprices"><span style="color: #000000"> </span></div>
+</td>
+<td colspan="1" valign="top" width="5%">
+                                
+                            </td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="shortmenucats"><span style="color: #000000">-- Available 2pm-5pm --</span></div>
+</td>
+</tr>
+<tr>
+<td valign="top" width="95%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr height="30px">
+<td height="30px" style="border-bottom: 1px solid #d2d4d2;">
+<!-- Recipe Name Is Displayed Here -->
+<div class="shortmenurecipes"><span style="color: #585858">Black Bean &amp; Corn Saute </span></div>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/vegan.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/gluten.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+</tr>
+</table>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+                              
+                             </td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+<div class="shortmenuprices"><span style="color: #000000"> </span></div>
+</td>
+<td colspan="1" valign="top" width="5%">
+                                
+                            </td>
+</tr>
+<tr>
+<td valign="top" width="95%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr height="30px">
+<td height="30px" style="border-bottom: 1px solid #d2d4d2;">
+<!-- Recipe Name Is Displayed Here -->
+<div class="shortmenurecipes"><span style="color: #585858">Chimichurri Roasted Chicken </span></div>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/gluten.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/halal.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+</tr>
+</table>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+                              
+                             </td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+<div class="shortmenuprices"><span style="color: #000000"> </span></div>
+</td>
+<td colspan="1" valign="top" width="5%">
+                                
+                            </td>
+</tr>
+<tr>
+<td valign="top" width="95%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr height="30px">
+<td height="30px" style="border-bottom: 1px solid #d2d4d2;">
+<!-- Recipe Name Is Displayed Here -->
+<div class="shortmenurecipes"><span style="color: #585858">Grilled Chimichurri Tofu </span></div>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/vegan.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/soy.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/gluten.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+</tr>
+</table>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+                              
+                             </td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+<div class="shortmenuprices"><span style="color: #000000"> </span></div>
+</td>
+<td colspan="1" valign="top" width="5%">
+                                
+                            </td>
+</tr>
+<tr>
+<td valign="top" width="95%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr height="30px">
+<td height="30px" style="border-bottom: 1px solid #d2d4d2;">
+<!-- Recipe Name Is Displayed Here -->
+<div class="shortmenurecipes"><span style="color: #585858">Vegan Italian White Beans </span></div>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/vegan.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/gluten.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+</tr>
+</table>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+                              
+                             </td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+<div class="shortmenuprices"><span style="color: #000000"> </span></div>
+</td>
+<td colspan="1" valign="top" width="5%">
+                                
+                            </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<p> </p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="50%">
+<table border="0" bordercolor="#FFFF00" cellpadding="0" cellspacing="0" height="100%" width="100%">
+<tr>
+<td align="left" height="15">
+<table border="0" bordercolor="#FF00FF" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td width="10%">
+<div class="shortmenumeals">Dinner</div>
+</td>
+<td align="left" valign="top">   
+                            
+                              <span class="shortmenunutritive"><a href="longmenu.aspx?sName=UC+Santa+Cruz+Dining&amp;locationNum=25&amp;locationName=Porter+%26+Kresge+Dining+Hall&amp;naFlag=1&amp;WeeksMenus=UCSC+-+This+Week%27s+Menus&amp;dtdate=10%2f27%2f2026&amp;mealName=Dinner" onmouseout="window.status= ' ';" onmouseover="window.status = 'Click for Nutrition Calculator'; return true;">Nutrition Calculator</a></span>
+</td>
+<td>
+                               
+                            </td>
+</tr>
+</table>
+</td>
+</tr>
+<tr height="5">
+<td valign="top">
+<table border="0" cellpadding="0" cellspacing="1" width="100%">
+<tr>
+<td colspan="4">
+<div class="shortmenucats"><span style="color: #000000">-- Entrees --</span></div>
+</td>
+</tr>
+<tr>
+<td valign="top" width="95%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr height="30px">
+<td height="30px" style="border-bottom: 1px solid #d2d4d2;">
+<!-- Recipe Name Is Displayed Here -->
+<div class="shortmenurecipes"><span style="color: #585858">Baked Black Cod with Garlic Butter </span></div>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/milk.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/fish.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/gluten.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+</tr>
+</table>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+                              
+                             </td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+<div class="shortmenuprices"><span style="color: #000000"> </span></div>
+</td>
+<td colspan="1" valign="top" width="5%">
+                                
+                            </td>
+</tr>
+<tr>
+<td valign="top" width="95%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr height="30px">
+<td height="30px" style="border-bottom: 1px solid #d2d4d2;">
+<!-- Recipe Name Is Displayed Here -->
+<div class="shortmenurecipes"><span style="color: #585858">Green Beans with Mushrooms and Carmelized Onions </span></div>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/vegan.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/gluten.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+</tr>
+</table>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+                              
+                             </td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+<div class="shortmenuprices"><span style="color: #000000"> </span></div>
+</td>
+<td colspan="1" valign="top" width="5%">
+                                
+                            </td>
+</tr>
+<tr>
+<td valign="top" width="95%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr height="30px">
+<td height="30px" style="border-bottom: 1px solid #d2d4d2;">
+<!-- Recipe Name Is Displayed Here -->
+<div class="shortmenurecipes"><span style="color: #585858">Steamed Brown Rice </span></div>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/vegan.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/gluten.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+</tr>
+</table>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+                              
+                             </td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+<div class="shortmenuprices"><span style="color: #000000"> </span></div>
+</td>
+<td colspan="1" valign="top" width="5%">
+                                
+                            </td>
+</tr>
+<tr>
+<td valign="top" width="95%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr height="30px">
+<td height="30px" style="border-bottom: 1px solid #d2d4d2;">
+<!-- Recipe Name Is Displayed Here -->
+<div class="shortmenurecipes"><span style="color: #585858">Tempeh Roasted with Chorizo Spice </span></div>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/vegan.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/soy.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/gluten.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+</tr>
+</table>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+                              
+                             </td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+<div class="shortmenuprices"><span style="color: #000000"> </span></div>
+</td>
+<td colspan="1" valign="top" width="5%">
+                                
+                            </td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="shortmenucats"><span style="color: #000000">-- Pizza --</span></div>
+</td>
+</tr>
+<tr>
+<td valign="top" width="95%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr height="30px">
+<td height="30px" style="border-bottom: 1px solid #d2d4d2;">
+<!-- Recipe Name Is Displayed Here -->
+<div class="shortmenurecipes"><span style="color: #585858">Cheese Pizza </span></div>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/veggie.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/soy.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/eggs.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/milk.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/sesame.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/wheat.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+</tr>
+</table>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+                              
+                             </td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+<div class="shortmenuprices"><span style="color: #000000"> </span></div>
+</td>
+<td colspan="1" valign="top" width="5%">
+                                
+                            </td>
+</tr>
+<tr>
+<td valign="top" width="95%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr height="30px">
+<td height="30px" style="border-bottom: 1px solid #d2d4d2;">
+<!-- Recipe Name Is Displayed Here -->
+<div class="shortmenurecipes"><span style="color: #585858">Thai Chicken Pizza </span></div>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/soy.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/eggs.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/milk.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/sesame.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/wheat.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+</tr>
+</table>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+                              
+                             </td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+<div class="shortmenuprices"><span style="color: #000000"> </span></div>
+</td>
+<td colspan="1" valign="top" width="5%">
+                                
+                            </td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="shortmenucats"><span style="color: #000000">-- Clean Plate --</span></div>
+</td>
+</tr>
+<tr>
+<td valign="top" width="95%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr height="30px">
+<td height="30px" style="border-bottom: 1px solid #d2d4d2;">
+<!-- Recipe Name Is Displayed Here -->
+<div class="shortmenurecipes"><span style="color: #585858">Allergen Free Halal Chicken Thigh </span></div>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/gluten.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/halal.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+</tr>
+</table>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+                              
+                             </td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+<div class="shortmenuprices"><span style="color: #000000"> </span></div>
+</td>
+<td colspan="1" valign="top" width="5%">
+                                
+                            </td>
+</tr>
+<tr>
+<td valign="top" width="95%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr height="30px">
+<td height="30px" style="border-bottom: 1px solid #d2d4d2;">
+<!-- Recipe Name Is Displayed Here -->
+<div class="shortmenurecipes"><span style="color: #585858">Steamed Rice </span></div>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/vegan.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/gluten.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+</tr>
+</table>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+                              
+                             </td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+<div class="shortmenuprices"><span style="color: #000000"> </span></div>
+</td>
+<td colspan="1" valign="top" width="5%">
+                                
+                            </td>
+</tr>
+<tr>
+<td valign="top" width="95%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr height="30px">
+<td height="30px" style="border-bottom: 1px solid #d2d4d2;">
+<!-- Recipe Name Is Displayed Here -->
+<div class="shortmenurecipes"><span style="color: #585858">Tofu with Kosher Salt </span></div>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/vegan.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/soy.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/gluten.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+</tr>
+</table>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+                              
+                             </td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+<div class="shortmenuprices"><span style="color: #000000"> </span></div>
+</td>
+<td colspan="1" valign="top" width="5%">
+                                
+                            </td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="shortmenucats"><span style="color: #000000">-- Campus Bakery --</span></div>
+</td>
+</tr>
+<tr>
+<td valign="top" width="95%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr height="30px">
+<td height="30px" style="border-bottom: 1px solid #d2d4d2;">
+<!-- Recipe Name Is Displayed Here -->
+<div class="shortmenurecipes"><span style="color: #585858">Pineapple Upside Down Cake </span></div>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/veggie.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/soy.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/eggs.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/milk.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/wheat.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+</tr>
+</table>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+                              
+                             </td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+<div class="shortmenuprices"><span style="color: #000000"> </span></div>
+</td>
+<td colspan="1" valign="top" width="5%">
+                                
+                            </td>
+</tr>
+<tr>
+<td valign="top" width="95%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr height="30px">
+<td height="30px" style="border-bottom: 1px solid #d2d4d2;">
+<!-- Recipe Name Is Displayed Here -->
+<div class="shortmenurecipes"><span style="color: #585858">Raspberry Cheesecake </span></div>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/veggie.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/soy.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/eggs.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/milk.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/wheat.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/alcohol.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+</tr>
+</table>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+                              
+                             </td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+<div class="shortmenuprices"><span style="color: #000000"> </span></div>
+</td>
+<td colspan="1" valign="top" width="5%">
+                                
+                            </td>
+</tr>
+<tr>
+<td valign="top" width="95%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr height="30px">
+<td height="30px" style="border-bottom: 1px solid #d2d4d2;">
+<!-- Recipe Name Is Displayed Here -->
+<div class="shortmenurecipes"><span style="color: #585858">Spice Cake </span></div>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/veggie.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/soy.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/eggs.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/milk.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/wheat.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+</tr>
+</table>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+                              
+                             </td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+<div class="shortmenuprices"><span style="color: #000000"> </span></div>
+</td>
+<td colspan="1" valign="top" width="5%">
+                                
+                            </td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="shortmenucats"><span style="color: #000000">-- Hot Bars --</span></div>
+</td>
+</tr>
+<tr>
+<td valign="top" width="95%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr height="30px">
+<td height="30px" style="border-bottom: 1px solid #d2d4d2;">
+<!-- Recipe Name Is Displayed Here -->
+<div class="shortmenurecipes"><span style="color: #585858">Applewood Smoked Bacon </span></div>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/pork.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/gluten.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+</tr>
+</table>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+                              
+                             </td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+<div class="shortmenuprices"><span style="color: #000000"> </span></div>
+</td>
+<td colspan="1" valign="top" width="5%">
+                                
+                            </td>
+</tr>
+<tr>
+<td valign="top" width="95%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr height="30px">
+<td height="30px" style="border-bottom: 1px solid #d2d4d2;">
+<!-- Recipe Name Is Displayed Here -->
+<div class="shortmenurecipes"><span style="color: #585858">Balsamic Caramelized Onions </span></div>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/vegan.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/gluten.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+</tr>
+</table>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+                              
+                             </td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+<div class="shortmenuprices"><span style="color: #000000"> </span></div>
+</td>
+<td colspan="1" valign="top" width="5%">
+                                
+                            </td>
+</tr>
+<tr>
+<td valign="top" width="95%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr height="30px">
+<td height="30px" style="border-bottom: 1px solid #d2d4d2;">
+<!-- Recipe Name Is Displayed Here -->
+<div class="shortmenurecipes"><span style="color: #585858">Beyond Meat Smash Burger </span></div>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/vegan.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/gluten.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+</tr>
+</table>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+                              
+                             </td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+<div class="shortmenuprices"><span style="color: #000000"> </span></div>
+</td>
+<td colspan="1" valign="top" width="5%">
+                                
+                            </td>
+</tr>
+<tr>
+<td valign="top" width="95%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr height="30px">
+<td height="30px" style="border-bottom: 1px solid #d2d4d2;">
+<!-- Recipe Name Is Displayed Here -->
+<div class="shortmenurecipes"><span style="color: #585858">Garlic Fries </span></div>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/veggie.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/soy.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+</tr>
+</table>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+                              
+                             </td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+<div class="shortmenuprices"><span style="color: #000000"> </span></div>
+</td>
+<td colspan="1" valign="top" width="5%">
+                                
+                            </td>
+</tr>
+<tr>
+<td valign="top" width="95%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr height="30px">
+<td height="30px" style="border-bottom: 1px solid #d2d4d2;">
+<!-- Recipe Name Is Displayed Here -->
+<div class="shortmenurecipes"><span style="color: #585858">Halal Blended Beef Patty </span></div>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/beef.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/gluten.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/halal.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+</tr>
+</table>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+                              
+                             </td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+<div class="shortmenuprices"><span style="color: #000000"> </span></div>
+</td>
+<td colspan="1" valign="top" width="5%">
+                                
+                            </td>
+</tr>
+<tr>
+<td valign="top" width="95%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr height="30px">
+<td height="30px" style="border-bottom: 1px solid #d2d4d2;">
+<!-- Recipe Name Is Displayed Here -->
+<div class="shortmenurecipes"><span style="color: #585858">Hamburger Bun </span></div>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/vegan.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/soy.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/sesame.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/wheat.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+</tr>
+</table>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+                              
+                             </td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+<div class="shortmenuprices"><span style="color: #000000"> </span></div>
+</td>
+<td colspan="1" valign="top" width="5%">
+                                
+                            </td>
+</tr>
+<tr>
+<td valign="top" width="95%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr height="30px">
+<td height="30px" style="border-bottom: 1px solid #d2d4d2;">
+<!-- Recipe Name Is Displayed Here -->
+<div class="shortmenurecipes"><span style="color: #585858">Roasted Garlic Dijon Mayonnaise </span></div>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/vegan.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/gluten.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/alcohol.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+</tr>
+</table>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+                              
+                             </td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+<div class="shortmenuprices"><span style="color: #000000"> </span></div>
+</td>
+<td colspan="1" valign="top" width="5%">
+                                
+                            </td>
+</tr>
+<tr>
+<td valign="top" width="95%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr height="30px">
+<td height="30px" style="border-bottom: 1px solid #d2d4d2;">
+<!-- Recipe Name Is Displayed Here -->
+<div class="shortmenurecipes"><span style="color: #585858">Stack Haus Burger Bar </span></div>
+</td>
+</tr>
+</table>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+                              
+                             </td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+<div class="shortmenuprices"><span style="color: #000000"> </span></div>
+</td>
+<td colspan="1" valign="top" width="5%">
+                                
+                            </td>
+</tr>
+<tr>
+<td valign="top" width="95%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr height="30px">
+<td height="30px" style="border-bottom: 1px solid #d2d4d2;">
+<!-- Recipe Name Is Displayed Here -->
+<div class="shortmenurecipes"><span style="color: #585858">Vegan Thousand Island Dressing </span></div>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/vegan.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle" width="10%">
+<img align="middle" alt="" height="25px" src="LegendImages/gluten.gif" style="margin: 3px 3px;" width="25px"/>
+</td>
+</tr>
+</table>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+                              
+                             </td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+<div class="shortmenuprices"><span style="color: #FFFFFF"> </span></div>
+</td>
+<td colspan="1" valign="top" width="5%">
+                                
+                            </td>
+</tr>
+<tr>
+<td colspan="4">
+<div class="shortmenucats"><span style="color: #000000">-- Cold Bars --</span></div>
+</td>
+</tr>
+<tr>
+<td valign="top" width="95%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr height="30px">
+<td height="30px" style="border-bottom: 1px solid #d2d4d2;">
+<!-- Recipe Name Is Displayed Here -->
+<div class="shortmenurecipes"><span style="color: #585858">Deli Bar </span></div>
+</td>
+</tr>
+</table>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+                              
+                             </td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+<div class="shortmenuprices"><span style="color: #000000"> </span></div>
+</td>
+<td colspan="1" valign="top" width="5%">
+                                
+                            </td>
+</tr>
+<tr>
+<td valign="top" width="95%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr height="30px">
+<td height="30px" style="border-bottom: 1px solid #d2d4d2;">
+<!-- Recipe Name Is Displayed Here -->
+<div class="shortmenurecipes"><span style="color: #585858">Salad Bar </span></div>
+</td>
+</tr>
+</table>
+</td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+                              
+                             </td>
+<td height="31px" style="border-bottom: 1px solid #d2d4d2;" valign="middle">
+<div class="shortmenuprices"><span style="color: #000000"> </span></div>
+</td>
+<td colspan="1" valign="top" width="5%">
+                                
+                            </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<p> </p>
+</td>
+</tr>
+
+</table>
+<table align="center" border="0" width="100%">
+<tr>
+<td><div class="shortmenufooter">The nutrient composition of food may vary due to genetic, environmental and processing variables; changes in product formulation, manufacturer's data, cooking and preparation techniques. The information provided in these labels should be considered as approximations of the nutritional analysis of the food. Consumer Advisory: consuming raw or undercooked meats, poultry, seafood, shellfish, or eggs may increase the risk of foodborne illness, especially if you have certain medical conditions. For a quick tour on how to read and interpret the facts on a nutrition label, visit the FDA website at www.cfsan.fda.gov/~dms/foodlab.html</div></td>
+</tr>
+</table>
+<!-- The following is required by Aurora Information Systems -- DO NOT MODIFY OR REMOVE -->
+<br/>
+<div class="poweredbyfoodpro">Powered by FoodPro<sup>®</sup></div>
+<!-- End of Aurora Information Systems Required Text -->
+<form>
+<table align="center" border="0" width="80%">
+<tr>
+<td align="center">
+<input onclick="top.location.href='location.aspx';" style="WIDTH: 175px" type="button" value="Select a Dining Location" width="175px"/>
+</td>
+<td align="left">
+<input onclick="top.location.href='http://housing.ucsc.edu/dining/index.html';" style="WIDTH: 175px" type="button" value="UCSC Dining Home Page" width="175px"/>
+</td>
+<td align="center">
+<img alt="Logo" height="56" src="images/dining-logo-foodpro.png" style="margin-left:12pt;" width="59"/>
+</td>
+</tr>
+</table>
+</form>
+
+
+</table>
+</body>
+</html>
+<!-- The following is required by Aurora Information Systems, DO NOT MODIFY OR REMOVE -->
+<!-- shortmenu.aspx, Version 2.6.0  -->
+<!-- End of Aurora Information Systems Required Text --> 
